@@ -43,7 +43,7 @@ const Navbar = ({
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-3 shrink-0"
+          className="flex items-center gap-2 shrink-0"
         >
 
           <div className="bg-gradient-to-r from-violet-600 to-fuchsia-500 p-2.5 rounded-2xl shadow-lg shadow-violet-500/20">
@@ -114,7 +114,7 @@ const Navbar = ({
         </div>
 
         {/* Right */}
-        <div className="flex items-center shrink-0 gap-2">
+        <div className="flex items-center gap-2 sm:gap-1 shrink-0">
 
           {/* Add Prompt */}
           <Link
@@ -131,7 +131,7 @@ const Navbar = ({
               hover:scale-105
               transition
 
-              px-3 md:px-5 py-2 md:py-3
+              px-2 sm:px-3 md:px-5 py-2 md:py-3
               rounded-2xl
 
               text-white
@@ -143,8 +143,11 @@ const Navbar = ({
           >
 
             <Plus size={18} />
-
+            <span className="hidden sm:inline">
             Add Prompt
+            </span>
+
+      
 
           </Link>
 
@@ -185,7 +188,7 @@ const Navbar = ({
               hover:scale-105
               transition
 
-              p-2 md:p-3
+              p-2 sm:p-3
               rounded-2xl
 
               border

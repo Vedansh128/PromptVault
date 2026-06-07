@@ -68,6 +68,9 @@ const PromptCard = ({
         y: -8,
         scale: 1.03,
       }}
+      whileTap={{
+        scale: 0.96,
+      }}
       className="
         group
         relative
@@ -82,23 +85,20 @@ const PromptCard = ({
         className="
           absolute
           inset-0
-
           rounded-3xl
 
           opacity-0
           group-hover:opacity-100
+          group-active:opacity-100
 
           transition-all
           duration-500
 
           animate-spin-slow
 
-          bg-gradient-to-r
-          from-violet-600
-          via-fuchsia-500
-          to-violet-600
+          bg-[conic-gradient(from_0deg,#7c3aed,#d946ef,#7c3aed)]
         "
-      ></div>
+      />
 
       {/* Glow */}
       <div
@@ -108,6 +108,7 @@ const PromptCard = ({
 
           opacity-0
           group-hover:opacity-100
+          group-active:opacity-100
 
           transition-all
           duration-500
@@ -115,18 +116,17 @@ const PromptCard = ({
           bg-violet-500/20
           blur-3xl
         "
-      ></div>
+      />
 
       {/* Card */}
       <div
         className="
           relative
           z-10
-          cursor-pointer
           h-full
 
           rounded-3xl
-
+          cursor-pointer
           bg-white/80
           dark:bg-zinc-950/90
 
@@ -152,7 +152,7 @@ const PromptCard = ({
             text-xs
 
             bg-violet-500/20
-            text-violet-300
+            text-violet-400
 
             px-3 py-1
 
@@ -165,7 +165,10 @@ const PromptCard = ({
         {/* Title */}
         <h2
           className="
-            text-lg md:text-2xl
+            text-base
+            sm:text-lg
+            md:text-2xl
+
             font-bold
             mt-5
 
@@ -188,7 +191,9 @@ const PromptCard = ({
 
             mt-4
 
-            text-xs md:text-sm
+            text-xs
+            sm:text-sm
+
             leading-relaxed
           "
         >
@@ -209,7 +214,8 @@ const PromptCard = ({
                 text-zinc-700
                 dark:text-zinc-300
 
-                text-xs
+                text-[10px]
+                sm:text-xs
 
                 px-3 py-1
 
@@ -223,8 +229,8 @@ const PromptCard = ({
 
         </div>
 
-        {/* Buttons */}
-        <div className="flex items-center cursor-pointer gap-2 md:gap-3 mt-6">
+        {/* Actions */}
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-3 mt-6">
 
           {/* View */}
           <button
@@ -236,20 +242,23 @@ const PromptCard = ({
 
               bg-black/5
               dark:bg-zinc-900
-               cursor-pointer
+
               hover:bg-violet-500/10
 
               border
               border-black/5
               dark:border-zinc-800
 
-              py-3
+              py-2 sm:py-3
 
               rounded-2xl
 
+              text-sm
               font-medium
 
               transition-all
+
+              cursor-pointer
             "
           >
             View Prompt
@@ -262,16 +271,18 @@ const PromptCard = ({
               bg-gradient-to-r
               from-violet-600
               to-fuchsia-500
-                cursor-pointer
-              hover:scale-110
 
-              transition-all
-
-              p-2 md:p-3
+              p-2 sm:p-3
 
               rounded-2xl
 
               text-white
+
+              hover:scale-110
+
+              transition-all
+
+              cursor-pointer
             "
           >
             <Copy size={18} />
@@ -283,14 +294,16 @@ const PromptCard = ({
               toggleFavorite(item)
             }
             className={`
-              p-3
+              p-2 sm:p-3
               rounded-2xl
-                cursor-pointer
+
               border
 
               transition-all
 
               hover:scale-110
+
+              cursor-pointer
 
               ${
                 isFavorite(item.id)
@@ -332,10 +345,10 @@ const PromptCard = ({
               <button
                 onClick={deletePrompt}
                 className="
-                  p-3
+                  p-2 sm:p-3
 
                   rounded-2xl
-                    cursor-pointer
+
                   bg-red-500/20
                   hover:bg-red-500/30
 
@@ -345,6 +358,8 @@ const PromptCard = ({
                   hover:scale-110
 
                   transition-all
+
+                  cursor-pointer
                 "
               >
 
