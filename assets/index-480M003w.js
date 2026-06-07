@@ -204,7 +204,7 @@ to {
         dark:bg-black/30\r
 \r
         backdrop-blur-xl\r
-      `,children:[(0,$.jsxs)(`div`,{className:`max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4`,children:[(0,$.jsxs)(Pn,{to:`/`,className:`flex items-center gap-3 shrink-0`,children:[(0,$.jsx)(`div`,{className:`bg-gradient-to-r from-violet-600 to-fuchsia-500 p-2.5 rounded-2xl shadow-lg shadow-violet-500/20`,children:(0,$.jsx)(Xm,{size:18,className:`text-white`})}),(0,$.jsxs)(`div`,{children:[(0,$.jsx)(`h1`,{className:`text-lg md:text-2xl font-black tracking-tight`,children:`PromptVault`}),(0,$.jsx)(`p`,{className:`hidden md:block text-xs text-zinc-500 dark:text-zinc-400`,children:`AI Prompt Library`})]})]}),(0,$.jsxs)(`div`,{className:`\r
+      `,children:[(0,$.jsxs)(`div`,{className:`max-w-7xl mx-auto px-3 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4`,children:[(0,$.jsxs)(Pn,{to:`/`,className:`flex items-center gap-2 shrink-0`,children:[(0,$.jsx)(`div`,{className:`bg-gradient-to-r from-violet-600 to-fuchsia-500 p-2.5 rounded-2xl shadow-lg shadow-violet-500/20`,children:(0,$.jsx)(Xm,{size:18,className:`text-white`})}),(0,$.jsxs)(`div`,{children:[(0,$.jsx)(`h1`,{className:`text-lg md:text-2xl font-black tracking-tight`,children:`PromptVault`}),(0,$.jsx)(`p`,{className:`hidden md:block text-xs text-zinc-500 dark:text-zinc-400`,children:`AI Prompt Library`})]})]}),(0,$.jsxs)(`div`,{className:`\r
             hidden md:flex\r
             flex-1 max-w-md\r
 \r
@@ -229,7 +229,7 @@ to {
 \r
               text-zinc-900\r
               dark:text-white\r
-            `})]}),(0,$.jsxs)(`div`,{className:`flex items-center shrink-0 gap-2`,children:[(0,$.jsxs)(Pn,{to:`/add-prompt`,className:`\r
+            `})]}),(0,$.jsxs)(`div`,{className:`flex items-center gap-2 sm:gap-1 shrink-0`,children:[(0,$.jsxs)(Pn,{to:`/add-prompt`,className:`\r
               flex\r
               items-center\r
               gap-2\r
@@ -241,7 +241,7 @@ to {
               hover:scale-105\r
               transition\r
 \r
-              px-3 md:px-5 py-2 md:py-3\r
+              px-2 sm:px-3 md:px-5 py-2 md:py-3\r
               rounded-2xl\r
 \r
               text-white\r
@@ -249,7 +249,7 @@ to {
 \r
               shadow-lg\r
               shadow-violet-500/20\r
-            `,children:[(0,$.jsx)(Jm,{size:18}),`Add Prompt`]}),(0,$.jsx)(`button`,{onClick:r,className:`\r
+            `,children:[(0,$.jsx)(Jm,{size:18}),(0,$.jsx)(`span`,{className:`hidden sm:inline`,children:`Add Prompt`})]}),(0,$.jsx)(`button`,{onClick:r,className:`\r
               bg-white/70\r
               dark:bg-zinc-900\r
                 cursor-pointer\r
@@ -269,7 +269,7 @@ to {
               hover:scale-105\r
               transition\r
 \r
-              p-2 md:p-3\r
+              p-2 sm:p-3\r
               rounded-2xl\r
 \r
               border\r
@@ -297,7 +297,7 @@ to {
 \r
               text-zinc-900\r
               dark:text-white\r
-            `})]})})]})},ih=(0,w.createContext)(),ah=({children:e})=>{let[t,n]=(0,w.useState)([]);return(0,$.jsx)(ih.Provider,{value:{favorites:t,toggleFavorite:e=>{t.find(t=>t.id===e.id)?n(t.filter(t=>t.id!==e.id)):n([...t,e])},isFavorite:e=>t.some(t=>t.id===e)},children:e})},oh=()=>(0,w.useContext)(ih),sh=({item:e,setSelectedPrompt:t})=>{let{toggleFavorite:n,isFavorite:r}=oh();return(0,$.jsxs)(Pm.div,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.4},whileHover:{y:-8,scale:1.03},className:`\r
+            `})]})})]})},ih=(0,w.createContext)(),ah=({children:e})=>{let[t,n]=(0,w.useState)([]);return(0,$.jsx)(ih.Provider,{value:{favorites:t,toggleFavorite:e=>{t.find(t=>t.id===e.id)?n(t.filter(t=>t.id!==e.id)):n([...t,e])},isFavorite:e=>t.some(t=>t.id===e)},children:e})},oh=()=>(0,w.useContext)(ih),sh=({item:e,setSelectedPrompt:t})=>{let{toggleFavorite:n,isFavorite:r}=oh();return(0,$.jsxs)(Pm.div,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.4},whileHover:{y:-8,scale:1.03},whileTap:{scale:.96},className:`\r
         group\r
         relative\r
         overflow-hidden\r
@@ -306,27 +306,25 @@ to {
       `,children:[(0,$.jsx)(`div`,{className:`\r
           absolute\r
           inset-0\r
-\r
           rounded-3xl\r
 \r
           opacity-0\r
           group-hover:opacity-100\r
+          group-active:opacity-100\r
 \r
           transition-all\r
           duration-500\r
 \r
           animate-spin-slow\r
 \r
-          bg-gradient-to-r\r
-          from-violet-600\r
-          via-fuchsia-500\r
-          to-violet-600\r
+          bg-[conic-gradient(from_0deg,#7c3aed,#d946ef,#7c3aed)]\r
         `}),(0,$.jsx)(`div`,{className:`\r
           absolute\r
           inset-0\r
 \r
           opacity-0\r
           group-hover:opacity-100\r
+          group-active:opacity-100\r
 \r
           transition-all\r
           duration-500\r
@@ -336,11 +334,10 @@ to {
         `}),(0,$.jsxs)(`div`,{className:`\r
           relative\r
           z-10\r
-          cursor-pointer\r
           h-full\r
 \r
           rounded-3xl\r
-\r
+          cursor-pointer\r
           bg-white/80\r
           dark:bg-zinc-950/90\r
 \r
@@ -361,13 +358,16 @@ to {
             text-xs\r
 \r
             bg-violet-500/20\r
-            text-violet-300\r
+            text-violet-400\r
 \r
             px-3 py-1\r
 \r
             rounded-full\r
           `,children:e.category}),(0,$.jsx)(`h2`,{className:`\r
-            text-lg md:text-2xl\r
+            text-base\r
+            sm:text-lg\r
+            md:text-2xl\r
+\r
             font-bold\r
             mt-5\r
 \r
@@ -383,7 +383,9 @@ to {
 \r
             mt-4\r
 \r
-            text-xs md:text-sm\r
+            text-xs\r
+            sm:text-sm\r
+\r
             leading-relaxed\r
           `,children:e.description}),(0,$.jsx)(`div`,{className:`flex flex-wrap gap-2 mt-5`,children:e.tags.map((e,t)=>(0,$.jsxs)(`span`,{className:`\r
                 bg-black/5\r
@@ -392,53 +394,61 @@ to {
                 text-zinc-700\r
                 dark:text-zinc-300\r
 \r
-                text-xs\r
+                text-[10px]\r
+                sm:text-xs\r
 \r
                 px-3 py-1\r
 \r
                 rounded-lg\r
-              `,children:[`#`,e]},t))}),(0,$.jsxs)(`div`,{className:`flex items-center cursor-pointer gap-2 md:gap-3 mt-6`,children:[(0,$.jsx)(`button`,{onClick:()=>t(e),className:`\r
+              `,children:[`#`,e]},t))}),(0,$.jsxs)(`div`,{className:`flex items-center gap-1 sm:gap-2 md:gap-3 mt-6`,children:[(0,$.jsx)(`button`,{onClick:()=>t(e),className:`\r
               flex-1\r
 \r
               bg-black/5\r
               dark:bg-zinc-900\r
-               cursor-pointer\r
+\r
               hover:bg-violet-500/10\r
 \r
               border\r
               border-black/5\r
               dark:border-zinc-800\r
 \r
-              py-3\r
+              py-2 sm:py-3\r
 \r
               rounded-2xl\r
 \r
+              text-sm\r
               font-medium\r
 \r
               transition-all\r
+\r
+              cursor-pointer\r
             `,children:`View Prompt`}),(0,$.jsx)(`button`,{onClick:()=>{navigator.clipboard.writeText(e.prompt),ui.success(`Prompt copied`)},className:`\r
               bg-gradient-to-r\r
               from-violet-600\r
               to-fuchsia-500\r
-                cursor-pointer\r
-              hover:scale-110\r
 \r
-              transition-all\r
-\r
-              p-2 md:p-3\r
+              p-2 sm:p-3\r
 \r
               rounded-2xl\r
 \r
               text-white\r
+\r
+              hover:scale-110\r
+\r
+              transition-all\r
+\r
+              cursor-pointer\r
             `,children:(0,$.jsx)(Gm,{size:18})}),(0,$.jsx)(`button`,{onClick:()=>n(e),className:`
-              p-3
+              p-2 sm:p-3
               rounded-2xl
-                cursor-pointer
+
               border
 
               transition-all
 
               hover:scale-110
+
+              cursor-pointer
 
               ${r(e.id)?`
                     bg-red-500/20
@@ -451,10 +461,10 @@ to {
                     dark:border-zinc-800
                   `}
             `,children:(0,$.jsx)(Km,{size:18,fill:r(e.id)?`red`:`transparent`,className:r(e.id)?`text-red-500`:``})}),e.isCustom&&(0,$.jsx)(`button`,{onClick:()=>{let t=(JSON.parse(localStorage.getItem(`customPrompts`))||[]).filter(t=>t.id!==e.id);localStorage.setItem(`customPrompts`,JSON.stringify(t)),ui.success(`Prompt deleted`),window.location.reload()},className:`\r
-                  p-3\r
+                  p-2 sm:p-3\r
 \r
                   rounded-2xl\r
-                    cursor-pointer\r
+\r
                   bg-red-500/20\r
                   hover:bg-red-500/30\r
 \r
@@ -464,6 +474,8 @@ to {
                   hover:scale-110\r
 \r
                   transition-all\r
+\r
+                  cursor-pointer\r
                 `,children:(0,$.jsx)(Qm,{size:18,className:`text-red-400`})})]})]})]})},ch=[`All`,`Programming`,`Marketing`,`Business`,`Career`,`Education`,`Design`,`Personal Branding`,`Content Writing`],lh=({selectedCategory:e,setSelectedCategory:t})=>(0,$.jsx)(`div`,{className:`flex gap-3 overflow-x-auto pb-2 scrollbar-hide`,children:ch.map(n=>(0,$.jsx)(`button`,{onClick:()=>t(n),className:`
             whitespace-nowrap cursor-pointer px-5 py-2 rounded-xl border transition text-sm
 
@@ -607,7 +619,7 @@ to {
         md:px-6\r
 \r
         py-16\r
-      `,children:[(0,$.jsx)(`div`,{className:`fixed top-0 left-0 w-[500px] h-[500px] bg-violet-500/20 blur-[120px] rounded-full`}),(0,$.jsxs)(`div`,{className:`relative z-10 max-w-7xl mx-auto`,children:[(0,$.jsxs)(`div`,{children:[(0,$.jsx)(`h1`,{className:`text-5xl font-black`,children:`Favorite Prompts`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Your saved AI prompts collection.`})]}),e.length>0?(0,$.jsx)(`div`,{className:`grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12`,children:e.map(e=>(0,$.jsx)(sh,{item:e,setSelectedPrompt:n},e.id))}):(0,$.jsxs)(`div`,{className:`text-center py-32`,children:[(0,$.jsx)(`h2`,{className:`text-4xl font-bold`,children:`No favorite prompts yet`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Save prompts by clicking the heart icon.`})]})]}),(0,$.jsx)(uh,{selectedPrompt:t,setSelectedPrompt:n})]})},mh=()=>{let[e,t]=(0,w.useState)({title:``,category:``,description:``,prompt:``,tags:``}),n=n=>{t({...e,[n.target.name]:n.target.value})};return(0,$.jsx)(`div`,{className:`min-h-screen bg-gradient-to-br from-slate-100 via-white to-violet-100 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-white px-4 md:px-6 py-16`,children:(0,$.jsxs)(`div`,{className:`max-w-3xl mx-auto`,children:[(0,$.jsx)(`h1`,{className:`text-4xl md:text-5xl font-black`,children:`Add Custom Prompt`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Create and save your own AI prompts.`}),(0,$.jsxs)(`form`,{onSubmit:n=>{n.preventDefault();let r=JSON.parse(localStorage.getItem(`customPrompts`))||[],i={id:Date.now(),isCustom:!0,...e,tags:e.tags.split(`,`)};localStorage.setItem(`customPrompts`,JSON.stringify([...r,i])),ui.success(`Prompt Added`),t({title:``,category:``,description:``,prompt:``,tags:``})},className:`space-y-6 mt-10`,children:[(0,$.jsx)(`input`,{type:`text`,name:`title`,placeholder:`Prompt Title`,value:e.title,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`input`,{type:`text`,name:`category`,placeholder:`Category`,value:e.category,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`textarea`,{rows:3,name:`description`,placeholder:`Description`,value:e.description,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`textarea`,{rows:8,name:`prompt`,placeholder:`Write Prompt...`,value:e.prompt,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`input`,{type:`text`,name:`tags`,placeholder:`react, coding, ai`,value:e.tags,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`button`,{className:`\r
+      `,children:[(0,$.jsx)(`div`,{className:`fixed top-0 left-0 w-[500px] h-[500px] bg-violet-500/20 blur-[120px] rounded-full`}),(0,$.jsxs)(`div`,{className:`relative z-10 max-w-7xl mx-auto`,children:[(0,$.jsxs)(`div`,{children:[(0,$.jsx)(`h1`,{className:`text-5xl font-black`,children:`Favorite Prompts`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Your saved AI prompts collection.`})]}),e.length>0?(0,$.jsx)(`div`,{className:`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4`,children:e.map(e=>(0,$.jsx)(sh,{item:e,setSelectedPrompt:n},e.id))}):(0,$.jsxs)(`div`,{className:`text-center py-32`,children:[(0,$.jsx)(`h2`,{className:`text-4xl font-bold`,children:`No favorite prompts yet`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Save prompts by clicking the heart icon.`})]})]}),(0,$.jsx)(uh,{selectedPrompt:t,setSelectedPrompt:n})]})},mh=()=>{let[e,t]=(0,w.useState)({title:``,category:``,description:``,prompt:``,tags:``}),n=n=>{t({...e,[n.target.name]:n.target.value})};return(0,$.jsx)(`div`,{className:`min-h-screen bg-gradient-to-br from-slate-100 via-white to-violet-100 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-white px-4 md:px-6 py-16`,children:(0,$.jsxs)(`div`,{className:`max-w-3xl mx-auto`,children:[(0,$.jsx)(`h1`,{className:`text-4xl md:text-5xl font-black`,children:`Add Custom Prompt`}),(0,$.jsx)(`p`,{className:`text-zinc-600 dark:text-zinc-400 mt-4`,children:`Create and save your own AI prompts.`}),(0,$.jsxs)(`form`,{onSubmit:n=>{n.preventDefault();let r=JSON.parse(localStorage.getItem(`customPrompts`))||[],i={id:Date.now(),isCustom:!0,...e,tags:e.tags.split(`,`)};localStorage.setItem(`customPrompts`,JSON.stringify([...r,i])),ui.success(`Prompt Added`),t({title:``,category:``,description:``,prompt:``,tags:``})},className:`space-y-6 mt-10`,children:[(0,$.jsx)(`input`,{type:`text`,name:`title`,placeholder:`Prompt Title`,value:e.title,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`input`,{type:`text`,name:`category`,placeholder:`Category`,value:e.category,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`textarea`,{rows:3,name:`description`,placeholder:`Description`,value:e.description,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`textarea`,{rows:8,name:`prompt`,placeholder:`Write Prompt...`,value:e.prompt,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`input`,{type:`text`,name:`tags`,placeholder:`react, coding, ai`,value:e.tags,onChange:n,className:`w-full bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-xl rounded-2xl p-4 outline-none`}),(0,$.jsx)(`button`,{className:`\r
               bg-gradient-to-r\r
               from-violet-600\r
               to-fuchsia-500\r
